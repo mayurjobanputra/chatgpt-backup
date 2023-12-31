@@ -16,16 +16,23 @@ A single client side script to backup your entire conversation history on [chat.
 2. Make sure you are logged in
 3. Open chrome console or firefox console (F12 on keyboard)
 4. Click on "Console" tab
-5. Copy the entire script content found in file backup.js and paste into the console input field at the bottom
-6. Press enter, script starts and will log progress to console
-   ![Progress](assets/progress.png)
-7. If it fails at any point you can check the console logs to see the offset it failed at
-8. You can run from any offset by adjusting the script offsets found at the bottom of the script:
+5. Copy the entire script content found in file backup.js and paste into the console input field at the bottom (right after the >)
+6. If you see a message like "Warning: Don’t paste code into the DevTools Console...", then type in "allow posting" and hit enter and then try pasting in the contents of backups.js again and hit enter.
+7. The script will start with "Promise..." and after a few seconds will log progress to the console (it might take a few seconds before working, be patient)
+
+![image](https://github.com/abacaj/chatgpt-backup/assets/6332663/12c0e616-157a-477d-b225-7e195b1575b3)
+
+8. If it fails at any point you can check the console logs to see the offset it failed at. The script may retry on its own without you needing to do anything (shown below).
+
+![image](https://github.com/abacaj/chatgpt-backup/assets/6332663/c738190e-c51f-4885-aad8-d7872867c171)
+
+9. You can run from any offset by adjusting the script offsets found at the bottom of the script:
 
 ```js
 const START_OFFSET = 0;
 const STOP_OFFSET = -1;
 ```
+10. Once completed, the JSON file will be generated and you will be asked to download it. See the instructions on this page for how to view this JSON file with index.html.
 
 ## How it works
 
